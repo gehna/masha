@@ -1,0 +1,13 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="400" fill="url(#paint0_linear_0_1)"/>
+<circle cx="200" cy="180" r="60" fill="#FFFFFF" fill-opacity="0.9"/>
+<path d="M160 120C160 107.163 170.163 97 183 97H217C229.837 97 240 107.163 240 120V160C240 172.837 229.837 183 217 183H183C170.163 183 160 172.837 160 160V120Z" fill="#FFFFFF" fill-opacity="0.9"/>
+<text x="200" y="300" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="18" font-weight="600">Maria</text>
+<text x="200" y="320" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="14">Psychologist</text>
+<defs>
+<linearGradient id="paint0_linear_0_1" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6366f1"/>
+<stop offset="1" stop-color="#8b5cf6"/>
+</linearGradient>
+</defs>
+</svg>

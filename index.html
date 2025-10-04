@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Психолог - Профессиональная помощь</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>Психолог</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">Обо мне</a></li>
+                <li><a href="#services" class="nav-link">С чем работаю</a></li>
+                <li><a href="#format" class="nav-link">Формат работы</a></li>
+                <li><a href="#contacts" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная секция -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Профессиональная психологическая помощь</h1>
+            <p>Помогаю найти внутреннюю гармонию и решить жизненные вопросы</p>
+            <a href="#about" class="cta-button">Узнать больше</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/masha300.png" alt="Психология" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="image-placeholder" style="display: none;">
+                <i class="fas fa-user-md"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-content">
+                <div class="section-image">
+                    <img src="images/aboutme.jpg" alt="Мария Хомякова - психолог" class="profile-image" onerror="this.src='images/profile-placeholder.svg'; this.alt='Placeholder - добавьте aboutme.jpg';">
+                </div>
+                <div class="section-text">
+                    <h2>Обо мне</h2>
+                    <p><strong>Меня зовут Мария Хомякова.</strong></p>
+                    <p>Я сертифицированный специалист в области гештальт-терапии, помогаю людям осознать свои чувства, потребности, желания и повысить качество жизни.</p>
+                    <p>Использую методы гештальт-подхода для решения широкого спектра психологических проблем: тревожность, депрессия, выгорание, кризисы, низкая самооценка, трудности в отношениях.</p>
+                    <p>Я могу помочь вам обрести внутренний баланс между умом, телом и чувствами, ощутить свою внутреннюю опору и научиться находить опоры во вне.</p>
+                    <p>Приглашаю вас к себе на сессии, где я буду создавать безопасное пространство для размещения ваших переживаний и поиска новых решений для позитивных изменений в жизни.</p>
+                    <div class="credentials">
+                        <div class="credential">
+                            <i class="fas fa-certificate"></i>
+                            <span>Сертифицированный специалист гештальт-терапии</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-heart"></i>
+                            <span>Индивидуальный подход к каждому клиенту</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- С чем работаю -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-content reverse">
+                <div class="section-image">
+                    <img src="images/work.jpg" alt="С чем работаю" class="work-image" onerror="this.src='images/profile-placeholder.svg'; this.alt='Placeholder - добавьте work.jpg';">
+                </div>
+                <div class="section-text">
+                    <h2>С чем работаю</h2>
+                    <p class="services-intro">Список тем, с которыми я работаю:</p>
+                    
+                    <div class="services-categories">
+                        <div class="service-category">
+                            <h3>Эмоциональные состояния</h3>
+                            <ul class="service-list">
+                                <li>Тревожность</li>
+                                <li>Сниженный эмоциональный фон и подавленность</li>
+                                <li>Выгорание</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-category">
+                            <h3>Межличностные отношения</h3>
+                            <ul class="service-list">
+                                <li>Сложности во взаимоотношениях с окружающими</li>
+                                <li>Трудности с выстраиванием границ</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-category">
+                            <h3>Личностное развитие</h3>
+                            <ul class="service-list">
+                                <li>Невнимательность к собственным эмоциям и потребностям</li>
+                                <li>Чувство неуверенности в себе и низкая самооценка</li>
+                                <li>Внутриличностные конфликты (противоречивые желания и потребности)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Формат работы -->
+    <section id="format" class="section">
+        <div class="container">
+            <div class="section-content">
+                <div class="section-image">
+                    <img src="images/format.jpg" alt="Формат работы" class="format-image" onerror="this.src='images/profile-placeholder.svg'; this.alt='Placeholder - добавьте format.jpg';">
+                </div>
+                <div class="section-text">
+                    <h2>Формат работы</h2>
+                    
+                    <div class="therapy-format">
+                        <div class="format-header">
+                            <i class="fas fa-user"></i>
+                            <h3>Индивидуальная терапия</h3>
+                        </div>
+                        <p>Данная терапия позволяет исследовать собственные мысли, чувства, действия клиента, выявляя причины текущих трудностей и находя способы их преодоления.</p>
+                        <p>Цель — осознать свои чувства и понять, какие потребности лежат под ними, а так же что мешает на пути их удовлетворения. Заметить свои привычные стратегии поведения и расширить их арсенал.</p>
+                        <div class="pricing-details">
+                            <div class="price-item">
+                                <span class="price-label">онлайн-сессия 50 минут</span>
+                                <span class="price-value">3150 рублей</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">сессия в кабинете в СПб 50 минут</span>
+                                <span class="price-value">3500 рублей</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="therapy-format">
+                        <div class="format-header">
+                            <i class="fas fa-users"></i>
+                            <h3>Парная терапия</h3>
+                        </div>
+                        <p>Этот вид терапии направлен на улучшение взаимоотношений между партнерами/супругами.</p>
+                        <p>Цель — помочь партнерам лучше понимать друг друга, экологично взаимодействовать в конфликтах, адаптироваться к разным этапам семейной жизни (брак, рождение детей, «опустение гнезда»), улучшить коммуникацию.</p>
+                        <div class="pricing-details">
+                            <div class="price-item">
+                                <span class="price-label">онлайн-сессия 90 минут</span>
+                                <span class="price-value">4850 рублей</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">сессия в кабинете в СПб 90 минут</span>
+                                <span class="price-value">5500 рублей</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="section">
+        <div class="container">
+            <div class="section-content reverse">
+                <div class="section-image">
+                    <img src="images/contacts.jpg" alt="Контакты" class="contacts-image" onerror="this.src='images/profile-placeholder.svg'; this.alt='Placeholder - добавьте contacts.jpg';">
+                </div>
+                <div class="section-text">
+                    <h2>Контакты</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fab fa-vk"></i>
+                            <div>
+                                <h3>VK</h3>
+                                <p><a href="https://vk.com/musia_khomyakova" target="_blank">@musia_khomyakova</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <h3>Telegram</h3>
+                                <p><a href="https://t.me/Lucky_Musia" target="_blank">@Lucky_Musia</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h3>WhatsApp</h3>
+                                <p><a href="https://wa.me/79110119639" target="_blank">+7 911 011 9639</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>МАХ</h3>
+                                <p><a href="tel:+79110119639">+7 911 011-96-39</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-section">
+                        <h3>Готовы начать работу над собой?</h3>
+                        <p>Запишитесь на первую бесплатную консультацию</p>
+                        <a href="tel:+79110119639" class="cta-button">Записаться на консультацию</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-brain"></i>
+                    <span>Психолог</span>
+                </div>
+                <p>&copy; 2024 Профессиональная психологическая помощь. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
