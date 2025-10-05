@@ -49,7 +49,7 @@ body {
     align-items: center;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #6366f1;
+    color: #217236;
 }
 
 .nav-logo i {
@@ -72,7 +72,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #6366f1;
+    color: #217236;
 }
 
 .nav-link::after {
@@ -82,7 +82,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: #6366f1;
+    background: #217236;
     transition: width 0.3s ease;
 }
 
@@ -109,7 +109,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #217236 0%, #217236 100%);
     color: white;
     padding-top: 70px;
 }
@@ -136,7 +136,7 @@ body {
 .cta-button {
     display: inline-block;
     background: #fff;
-    color: #6366f1;
+    color: #217236;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 50px;
@@ -232,9 +232,9 @@ body {
 .section-image .image-placeholder {
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #217236, #217236);
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(33, 114, 55, 0.3);
 }
 
 .section-image .image-placeholder i {
@@ -247,7 +247,7 @@ body {
     height: 400px;
     object-fit: cover;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(33, 114, 55, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -256,9 +256,9 @@ body {
 }
 
 .profile-image[src$=".svg"] {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #217236, #217236);
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(33, 114, 55, 0.3);
 }
 
 .format-image {
@@ -267,7 +267,7 @@ body {
     object-fit: cover;
     object-position: center -25px;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(33, 114, 55, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -276,9 +276,9 @@ body {
 }
 
 .format-image[src$=".svg"] {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #217236, #217236);
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(33, 114, 55, 0.3);
 }
 
 .work-image {
@@ -287,7 +287,7 @@ body {
     object-fit: cover;
     object-position: center 0px;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(33, 114, 55, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -296,9 +296,9 @@ body {
 }
 
 .work-image[src$=".svg"] {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #217236, #217236);
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(33, 114, 55, 0.3);
 }
 
 .contacts-image {
@@ -307,7 +307,7 @@ body {
     object-fit: cover;
     object-position: center -130px;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(33, 114, 55, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -316,9 +316,9 @@ body {
 }
 
 .contacts-image[src$=".svg"] {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #217236, #217236);
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(33, 114, 55, 0.3);
 }
 
 .image-placeholder p {
@@ -368,11 +368,11 @@ body {
     padding: 15px;
     background: #f8fafc;
     border-radius: 10px;
-    border-left: 4px solid #6366f1;
+    border-left: 4px solid #217236;
 }
 
 .credential i {
-    color: #6366f1;
+    color: #217236;
     font-size: 1.2rem;
 }
 
@@ -397,7 +397,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 4px solid #6366f1;
+    border-left: 4px solid #217236;
 }
 
 .service-category:hover {
@@ -417,7 +417,7 @@ body {
 
 .service-category h3::before {
     content: '●';
-    color: #6366f1;
+    color: #217236;
     font-size: 1.2rem;
 }
 
@@ -446,7 +446,7 @@ body {
     content: '→';
     position: absolute;
     left: 0;
-    color: #6366f1;
+    color: #217236;
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -480,7 +480,7 @@ body {
 
 .format-header i {
     font-size: 1.5rem;
-    color: #6366f1;
+    color: #217236;
 }
 
 .format-header h3 {
@@ -522,13 +522,13 @@ body {
 }
 
 .price-value {
-    color: #6366f1;
+    color: #217236;
     font-weight: 700;
     font-size: 1.1rem;
     background: white;
     padding: 8px 16px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 2px 8px rgba(33, 114, 55, 0.2);
 }
 
 /* Contacts */
@@ -555,7 +555,7 @@ body {
 }
 
 .contact-item i {
-    color: #6366f1;
+    color: #217236;
     font-size: 1.5rem;
     width: 30px;
 }
@@ -573,14 +573,14 @@ body {
 }
 
 .contact-item a {
-    color: #6366f1;
+    color: #217236;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .contact-item a:hover {
-    color: #4f46e5;
+    color: #1a5a2e;
     text-decoration: underline;
 }
 
@@ -625,7 +625,7 @@ body {
     align-items: center;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #6366f1;
+    color: #217236;
 }
 
 .footer-logo i {
