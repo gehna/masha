@@ -159,35 +159,38 @@ body {
 }
 
 .hero-image-container {
-    width: 300px;
-    height: 300px;
+    width: 240px; /* was 300px */
+    height: 240px; /* was 300px */
     border-radius: 50%;
     overflow: hidden;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition: none !important;
     flex-shrink: 0;
-}
-
-.hero-image-container:hover {
-    transform: scale(1.05);
 }
 
 .hero-image-container img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center calc(50% + 15px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 45px;
-    background: rgba(255, 255, 255, 0.1);
+    object-position: center;
+    display: block;
+    padding: 0;
+    background: transparent;
+    transform: scale(0.7);
+    transform-origin: center;
+    transition: none !important;
+}
+
+/* Prevent any hover-based scaling on the hero image */
+.hero-image-container:hover img,
+.hero-image-container img:hover {
+    transform: scale(0.7) !important;
 }
 
 .hero-image img:hover {
-    transform: scale(1.05);
+    transform: none !important;
 }
 
 .image-placeholder {
@@ -206,6 +209,25 @@ body {
     font-size: 5rem;
     color: rgba(255, 255, 255, 0.8);
 }
+
+/* CSS Variables for image presentation */
+:root {
+    --image-size-desktop: 440px;
+    --image-size-tablet: 300px;
+    --image-size-mobile: 240px;
+    --image-radius: 18px;
+    --image-border: 1px solid rgba(0, 0, 0, 0.08);
+    --image-bg: #f3f4f6; /* light gray background */
+    --hero-image-scale: 0.85; /* scale for psycharacter inside circle */
+}
+
+/* Optional presets for quick theme tweaks */
+.image-bg-light { --image-bg: #f8fafc; }
+.image-bg-dark { --image-bg: #111827; }
+.image-bg-transparent { --image-bg: transparent; }
+.image-radius-soft { --image-radius: 12px; }
+.image-radius-round { --image-radius: 24px; }
+.image-border-strong { --image-border: 1px solid rgba(0,0,0,0.15); }
 
 /* Секции */
 .section {
@@ -246,83 +268,35 @@ body {
     color: white;
 }
 
-.profile-image {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.profile-image:hover {
-    transform: scale(1.02);
-}
-
-.profile-image[src$=".svg"] {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
-}
-
-.format-image {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    object-position: center -25px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.format-image:hover {
-    transform: scale(1.02);
-}
-
-.format-image[src$=".svg"] {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
-}
-
-.work-image {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    object-position: center 0px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.work-image:hover {
-    transform: scale(1.02);
-}
-
-.work-image[src$=".svg"] {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
-}
-
+.profile-image,
+.format-image,
+.work-image,
 .contacts-image {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    object-position: center -130px;
-    border-radius: 20px;
+    width: 100%;
+    max-width: var(--image-size-desktop);
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: var(--image-radius);
+    border: var(--image-border);
+    background: transparent;
     box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
     transition: transform 0.3s ease;
+    display: block;
 }
 
+.profile-image:hover,
+.format-image:hover,
+.work-image:hover,
 .contacts-image:hover {
     transform: scale(1.02);
 }
 
+.profile-image[src$=".svg"],
+.format-image[src$=".svg"],
+.work-image[src$=".svg"],
 .contacts-image[src$=".svg"] {
     background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
 }
 
 .image-placeholder p {
@@ -624,6 +598,14 @@ body {
     gap: 20px;
 }
 
+/* Disable hover zoom for psy.png across all modes without blocking clicks */
+img[src$="psy.png"],
+img[src$="psy.png"]:hover,
+.hero-image-container:hover img[src$="psy.png"] {
+    transform: scale(0.7) !important;
+    transition: none !important;
+}
+
 .footer-logo {
     display: flex;
     align-items: center;
@@ -712,15 +694,44 @@ body {
         margin-top: 30px;
     }
     
-    .hero-image-container {
-        width: 250px;
-        height: 250px;
-        margin-top: 30px;
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
     }
     
     .section-content {
         flex-direction: column;
         gap: 30px;
+        align-items: center;
+    }
+    
+    .section-image {
+        flex: 0 0 auto;
+        width: fit-content;
+        height: fit-content;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        line-height: 0; /* prevent inline gaps */
+        display: inline-block;
+    }
+    
+    .section-image img {
+        width: auto !important;
+        height: auto !important;
+        max-width: 100%;
+        display: block;
+    }
+    
+    .section-image .image-placeholder {
+        width: auto !important;
+        height: auto !important;
+        min-width: 0;
+        min-height: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
     }
     
     .section-content.reverse {
@@ -732,24 +743,38 @@ body {
         height: 280px;
     }
     
+    .profile-image,
+    .format-image,
+    .work-image,
+    .contacts-image {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border: none; /* remove extra edge on small screens */
+        box-shadow: none; /* no outer glow that looks like white field */
+        border-radius: var(--image-radius);
+        background: transparent;
+        display: block;
+    }
+    
     .profile-image {
-        width: 280px;
-        height: 280px;
+        width: 300px;
+        height: 300px;
     }
     
     .format-image {
-        width: 280px;
-        height: 280px;
+        width: 300px;
+        height: 300px;
     }
     
     .work-image {
-        width: 280px;
-        height: 280px;
+        width: 300px;
+        height: 300px;
     }
     
     .contacts-image {
-        width: 280px;
-        height: 280px;
+        width: 300px;
+        height: 300px;
     }
     
     .section-text h2 {
@@ -834,24 +859,38 @@ body {
         height: 220px;
     }
     
+    .profile-image,
+    .format-image,
+    .work-image,
+    .contacts-image {
+        max-width: var(--image-size-mobile);
+        width: auto;
+        height: auto;
+        border: var(--image-border);
+        box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+        border-radius: var(--image-radius);
+        background: transparent;
+        display: block;
+    }
+    
     .profile-image {
-        width: 220px;
-        height: 220px;
+        width: 240px;
+        height: 240px;
     }
     
     .format-image {
-        width: 220px;
-        height: 220px;
+        width: 240px;
+        height: 240px;
     }
     
     .work-image {
-        width: 220px;
-        height: 220px;
+        width: 240px;
+        height: 240px;
     }
     
     .contacts-image {
-        width: 220px;
-        height: 220px;
+        width: 240px;
+        height: 240px;
     }
     
     .hero-image .image-placeholder {
@@ -880,3 +919,5 @@ body {
         padding: 15px;
     }
 }
+
+
