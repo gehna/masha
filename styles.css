@@ -52,9 +52,17 @@ body {
     color: #6366f1;
 }
 
-.nav-logo i {
-    margin-right: 10px;
-    font-size: 1.8rem;
+.nav-logo-img {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 12px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+    vertical-align: middle;
+    filter: brightness(0) saturate(100%) invert(39%) sepia(89%) saturate(1352%) hue-rotate(224deg) brightness(95%) contrast(101%);
 }
 
 .nav-menu {
@@ -99,38 +107,9 @@ body {
 .bar {
     width: 25px;
     height: 3px;
-    background: #333;
+    background: #6366f1;
     margin: 3px 0;
     transition: 0.3s;
-}
-
-/* Главная секция */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding-top: 70px;
-}
-
-.hero-content {
-    flex: 1;
-    max-width: 600px;
-    padding: 0 40px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
 }
 
 .cta-button {
@@ -150,66 +129,6 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.hero-image-container {
-    width: 240px; /* was 300px */
-    height: 240px; /* was 300px */
-    border-radius: 50%;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: none !important;
-    flex-shrink: 0;
-}
-
-.hero-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-    padding: 0;
-    background: transparent;
-    transform: scale(0.7);
-    transform-origin: center;
-    transition: none !important;
-}
-
-/* Prevent any hover-based scaling on the hero image */
-.hero-image-container:hover img,
-.hero-image-container img:hover {
-    transform: scale(0.7) !important;
-}
-
-.hero-image img:hover {
-    transform: none !important;
-}
-
-.image-placeholder {
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.image-placeholder i {
-    font-size: 5rem;
-    color: rgba(255, 255, 255, 0.8);
-}
-
 /* CSS Variables for image presentation */
 :root {
     --image-size-desktop: 440px;
@@ -218,7 +137,6 @@ body {
     --image-radius: 18px;
     --image-border: 1px solid rgba(0, 0, 0, 0.08);
     --image-bg: #f3f4f6; /* light gray background */
-    --hero-image-scale: 0.85; /* scale for psycharacter inside circle */
 }
 
 /* Optional presets for quick theme tweaks */
@@ -233,6 +151,12 @@ body {
 .section {
     padding: 100px 0;
     background: white;
+    margin-top: 70px;
+}
+
+.section:first-of-type {
+    margin-top: 0;
+    padding-top: 170px;
 }
 
 .section:nth-child(even) {
@@ -399,6 +323,45 @@ body {
     font-size: 1.2rem;
 }
 
+.service-category p {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.service-category .first-sentence {
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-category .first-sentence::before {
+    content: '●';
+    color: #6366f1;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.service-category .second-sentence {
+    position: relative;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.service-category .second-sentence::before {
+    content: '→';
+    color: #6366f1;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.education-title {
+    margin-top: 40px;
+}
+
 .service-list {
     list-style: none;
     padding: 0;
@@ -421,7 +384,7 @@ body {
 }
 
 .service-list li::before {
-    content: '→';
+    content: '•';
     position: absolute;
     left: 0;
     color: #6366f1;
@@ -598,14 +561,6 @@ body {
     gap: 20px;
 }
 
-/* Disable hover zoom for psy.png across all modes without blocking clicks */
-img[src$="psy.png"],
-img[src$="psy.png"]:hover,
-.hero-image-container:hover img[src$="psy.png"] {
-    transform: scale(0.7) !important;
-    transition: none !important;
-}
-
 .footer-logo {
     display: flex;
     align-items: center;
@@ -621,10 +576,6 @@ img[src$="psy.png"]:hover,
 
 /* Адаптивность для планшетов */
 @media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-    
     .section-content {
         gap: 40px;
     }
@@ -637,6 +588,15 @@ img[src$="psy.png"]:hover,
 
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+    
+    .nav-logo-img {
+        width: 36px;
+        height: 36px;
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -662,6 +622,14 @@ img[src$="psy.png"]:hover,
         margin: 10px 0;
     }
     
+    .nav-menu .nav-link {
+        color: #6366f1;
+    }
+    
+    .nav-menu .nav-link:hover {
+        color: #4f46e5;
+    }
+    
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -672,32 +640,6 @@ img[src$="psy.png"]:hover,
     
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
-    }
-    
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 100px 20px 50px;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.1rem;
-    }
-    
-    .hero-image .image-placeholder {
-        width: 250px;
-        height: 250px;
-        margin-top: 30px;
-    }
-    
-    .hero-image img {
-        width: 100%;
-        height: 100%;
-        margin-top: 0;
     }
     
     .section-content {
@@ -838,12 +780,18 @@ img[src$="psy.png"]:hover,
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
+    .nav-logo {
+        font-size: 1rem;
     }
     
-    .hero h1 {
-        font-size: 2rem;
+    .nav-logo-img {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+    
+    .container {
+        padding: 0 15px;
     }
     
     .section {
@@ -891,16 +839,6 @@ img[src$="psy.png"]:hover,
     .contacts-image {
         width: 240px;
         height: 240px;
-    }
-    
-    .hero-image .image-placeholder {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .hero-image-container {
-        width: 200px;
-        height: 200px;
     }
     
     .cta-section {
